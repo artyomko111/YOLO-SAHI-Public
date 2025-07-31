@@ -22,3 +22,5 @@ Install SAHI:
 ```
 pip install sahi
 ```
+## Data Preparation
+Download the VisDrone dataset, and put the data into datasets/visdrone/.
