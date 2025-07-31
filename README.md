@@ -23,4 +23,4 @@ Install SAHI:
 pip install sahi
 ```
 ## Data Preparation
-1. Download the [VisDrone](https://github.com/VisDrone/VisDrone-Dataset?tab=readme-ov-file) dataset, and put the data into datasets/visdrone/.
+1. Download the [VisDrone](https://github.com/VisDrone/VisDrone-Dataset?tab=readme-ov-file) dataset(find Task1: Object Detection in Images and download folders: trainset, valset and testset-dev, and put the data into datasets/visdrone/.
