@@ -3,7 +3,7 @@ This repository provides the source code for the thesis project "Improving Small
 # Instructions
 ## Installation
 ```bash
-# Install the following dependencies:
+Install the following dependencies:
 Anaconda          # Create inference and training environments on Ubuntu
-# Install additional dependencies:
+Install additional dependencies:
 pip install -r requirements.txt
