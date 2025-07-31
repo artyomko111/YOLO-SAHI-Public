@@ -39,5 +39,5 @@ dataset/
 │ │ ├── images/
 │ │ └── labels/
 ```
-
+4. Convert the VisDrone dataset's labels to COCO format (.json) using the following command.
 
