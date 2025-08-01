@@ -40,10 +40,10 @@ dataset/
 │ │ └── labels/
 ```
 4. Use [Yolo-to-COCO-format-converter](https://github.com/Taeyoung96/Yolo-to-COCO-format-converter) to convert the VisDrone dataset's labels to COCO format (.json).
-### Requirements:
+### Requirements:<br>
 
-numpy
-OpenCV
+numpy<br>
+OpenCV<br>
 You can make same environment with anaconda environment.
 ```
 conda create -n Yolo-to-COCO python=3.8
