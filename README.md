@@ -104,6 +104,26 @@ cd /yolov9
 3. Train the YOLOv9-E model on the VisDrone dataset using the following command
 ```
 # Train the yolov9-e model for 500 epochs
-python train_dual.py --workers 2 --device 0 --batch 1 --data data/data_visdrone.yaml --img 1280 --cfg models/detect/yolov9-e.yaml --weights '' --name yolov9-e --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15
+python train_dual.py --workers 2 --device 0 --batch 1 --data data/data_visdrone.yaml --img 1280 --cfg models/detect/yolov9-e.yaml --weights '' --name yolov9-e --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15 --save_json True
 ```
 ### YOLOv10
+Follow these instructions to train the YOLOV10-X:
+1. Create the conda environment
+```
+conda create -n yolov10 python=3.9
+conda activate yolov10
+
+# Move to the YOLOV10 directory
+cd train/YOLOv10
+```
+2. Download the [YOLOv10-X model](https://github.com/artyomko111/YOLO-SAHI/blob/main/models/yolov9-e.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
+3. Install the dependencies
+```
+pip install -r requirements.txt
+pip install -e .
+```
+4. Train the YOLOV10-X model on the VisDrone dataset using the following command
+```
+# Train the yolov10-x model for 500 epochs
+yolo detect train data= data/data_visdrone.yaml model= models/detect/yolov10-x.yaml epochs=500 batch=2 imgsz=1280 device=0 pretrained=yolov10x.pt save_json=True
+```
