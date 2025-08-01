@@ -83,3 +83,26 @@ Command to use:
 python convert.py
 ```
 ## Models Training
+### YOLOv9
+Follow these instructions to train the YOLOR-D6:
+1. Docker environment (recommended)
+```
+# create the docker container, you can change the share memory size if you have more.
+nvidia-docker run --name yolov9 -it -v your_coco_path/:/coco/ -v your_code_path/:/yolov9 --shm-size=64g nvcr.io/nvidia/pytorch:21.11-py3
+
+# apt install required packages
+apt update
+apt install -y zip htop screen libgl1-mesa-glx
+
+# pip install required packages
+pip install seaborn thop
+
+# go to code folder
+cd /yolov9
+```
+2. Train the YOLOv9-E model on the VisDrone dataset using the following command
+```
+# Train the yolov9-e model for 500 epochs
+python train_dual.py --workers 2 --device 0 --batch 1 --data data/data_visdrone.yaml --img 1280 --cfg models/detect/yolov9-e.yaml --weights '' --name yolov9-e --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15
+```
+### YOLOv10
