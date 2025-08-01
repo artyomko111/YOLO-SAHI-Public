@@ -116,7 +116,7 @@ conda activate yolov10
 # Move to the YOLOV10 directory
 cd train/YOLOv10
 ```
-2. Download the [YOLOv10-X model](https://github.com/artyomko111/YOLO-SAHI/blob/main/models/yolov9-e.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
+2. Download the [YOLOv10-X model](https://github.com/artyomko111/YOLO-SAHI/blob/main/models/yolov10x.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
 3. Install the dependencies
 ```
 pip install -r requirements.txt
