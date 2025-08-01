@@ -169,25 +169,15 @@ pip install -e .
 yolo detect train data=data/data_visdrone.yaml model=models/detect/yolov12x-modified.yaml epochs=500 batch=2 imgsz=1280 device=0 save_json=True
 ```
 ## Prediction with SAHI
-1. Create the conda environment
-```
-conda create -n sahi python=3.11
-conda activate sahi
-
-# Move to the YOLO-R directory
-cd predict/sahi
-```
-2. Install the dependencies
-```
-pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu126
-pip install ultralytics>=8.3.161
-pip install sahi
-```
-3. Prediction
 You can specify additional sliced prediction parameters as:
 ```
 sahi predict --slice_width 1024 --slice_height 1024 --overlap_height_ratio 0.2 --overlap_width_ratio 0.2 --postprocess_match_metric IOU --postprocess_match_threshold 0.65 --model_confidence_threshold 0.5 --source dataset/visdrone/VisDrone2019-DET-test_dev/images --model_path detect/weights/best.pt --model_config_path data/data_visdrone.yaml --model_type ultralytics
 ```
 • Specify detection framework as ```--model_type ultralytics``` for Ultralytics, to match with your model weight file
-• 
+• Specify postprocess type as ```--postprocess_type GREEDYNMM``` or ```--postprocess_type NMS``` to be applied over sliced predictions
+• Specify postprocess match metric as ```--postprocess_match_metric IOS``` for intersection over smaller area or ```--postprocess_match_metric IOU``` for intersection over union
+• Specify postprocess match threshold as ```--postprocess_match_threshold 0.65```
+• If you don't want to export prediction visuals, add ```--novisual``` argument.
+• By default, scripts apply both standard and sliced prediction (multi-stage inference). If you don't want to perform sliced prediction add ```--no_sliced_prediction argument```. If you don't want to perform standard prediction add ```--no_standard_prediction argument```.
+• Provide COCO json path as, which was converted into the 'Data Preparation' section  --dataset_json_path dataset.json and coco image folder as --source dataset/visdrone/VisDrone2019-DET-test_dev/images, predictions will be exported as a coco json file to runs/predict/exp/results.json. Then you can use coco_evaluation command to calculate COCO evaluation results or coco_error_analysis command to calculate detailed COCO error plots.
 
