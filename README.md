@@ -168,5 +168,13 @@ pip install -e .
 # Train the yolov12-x model for 500 epochs
 yolo detect train data=data/data_visdrone.yaml model=models/detect/yolov12x-modified.yaml epochs=500 batch=2 imgsz=1280 device=0 save_json=True
 ```
+## Prediction with SAHI
+1. Create the conda environment
+```
+conda create -n sahi python=3.11
+conda activate sahi
 
+# Move to the YOLO-R directory
+cd predict/sahi
+```
 
