@@ -78,3 +78,7 @@ python main.py --yolo-subdir --path <datasets/visdrone/dataset_root_dir> --outpu
 5. Convert YOLO (.txt) to COCO (.json) format for prediction outputs of YOLOv9–v12 models (without SAHI integration)<br>
 Provide paths to the images and labels as shown in this figure<br>
 ![Failure case](.github/assets/convert.png) <br>
+Command to use:
+```
+python convert.py
+```
