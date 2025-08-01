@@ -84,7 +84,7 @@ python convert.py
 ```
 ## Models Training
 ### YOLOv9
-Follow these instructions to train the YOLOR-D6:
+Follow these instructions to train the YOLOv9-E:
 1. Docker environment (recommended)
 ```
 # create the docker container, you can change the share memory size if you have more.
