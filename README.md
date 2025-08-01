@@ -134,7 +134,7 @@ Follow these instructions to train the YOLOV11-X:
 conda create -n yolov11 python=3.11
 conda activate yolov11
 
-# Move to the YOLOV10 directory
+# Move to the YOLOV11 directory
 cd train/YOLOv11
 ```
 
