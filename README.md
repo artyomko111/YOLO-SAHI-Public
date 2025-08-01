@@ -100,7 +100,8 @@ pip install seaborn thop
 # go to code folder
 cd /yolov9
 ```
-2. Download the [YOLOv9-e model](https://raw.githubusercontent.com/artyomko111/YOLO-SAHI/main/models/yolov9-e.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
+2. Download the [YOLOv9-e model](https://raw.githubusercontent.com/artyomko111/YOLO-SAHI/main/models/yolov9-e.yaml
+) and make sure that ```nc: 10```, since our project also uses 10 classes.
 3. Train the YOLOv9-E model on the VisDrone dataset using the following command
 ```
 # Train the yolov9-e model for 500 epochs
