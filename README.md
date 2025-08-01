@@ -134,7 +134,7 @@ Follow these instructions to train the YOLOV11-X:
 conda create -n yolov11 python=3.11
 conda activate yolov11
 
-# Move to the YOLOV11 directory
+# Move to the YOLOv11 directory
 cd train/YOLOv11
 ```
 2. Download the [YOLOv11-X model](https://github.com/artyomko111/YOLO-SAHI/blob/main/models/yolov11x_modified.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
@@ -147,6 +147,26 @@ pip install ultralytics
 # Train the yolov11-x model for 500 epochs
 yolo detect train data=data/data_visdrone.yaml model=models/detect/yolov11x-modified.yaml epochs=500 batch=2 imgsz=1280 device=0 save_json=True
 ```
+### YOLOv12
+1. Create the conda environment
+```
+conda create -n yolov12 python=3.11
+conda activate yolov12
 
+# Move to the YOLOv12 directory
+cd train/YOLOv12
+```
+2. Download the [YOLOv12-X model](https://github.com/artyomko111/YOLO-SAHI/blob/main/models/yolov12x_modified.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
+3. Install the dependencies
+```
+wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.3/flash_attn-2.7.3+cu11torch2.2cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
+pip install -r requirements.txt
+pip install -e .
+```
+4. Train the YOLOv12-X model on the VisDrone dataset using the following command
+```
+# Train the yolov12-x model for 500 epochs
+yolo detect train data=data/data_visdrone.yaml model=models/detect/yolov12x-modified.yaml epochs=500 batch=2 imgsz=1280 device=0 save_json=True
+```
 
 
