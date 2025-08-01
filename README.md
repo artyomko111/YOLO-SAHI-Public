@@ -60,7 +60,15 @@ cd Yolo-to-COCO-format-converter
 Change classes with your own dataset.<br>
 
 In main.py, there is a code that declare the classes. You will change this with your obj.names.<br>
-![Failure case](.github/assets/000.png)
-
-
+![Failure case](.github/assets/000.png) <br>
+Annotations are nested in a folder 'YOLO_darknet' <br>
+Use this approach if your annotations are in nested a level below the image files like this:
+```
+    dataset_root_dir/
+        YOLO_darknet/
+            Photo_00001.txt
+            Photo_00002.txt
+        Photo_00001.jpg
+        Photo_00002.jpg
+```
 
