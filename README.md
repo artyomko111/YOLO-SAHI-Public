@@ -71,4 +71,7 @@ Use this approach if your annotations are in nested a level below the image file
         Photo_00001.jpg
         Photo_00002.jpg
 ```
-
+Command to use:
+```
+python main.py --yolo-subdir --path <datasets/visdrone/dataset_root_dir> --output <VisDrone2019-DET_test_coco_start>
+```
