@@ -57,3 +57,8 @@ Just clone this repository.
 git clone https://github.com/Taeyoung96/Yolo-to-COCO-format-converter.git
 cd Yolo-to-COCO-format-converter
 ```
+Change classes with your own dataset.<br>
+
+In main.py, there is a code that declare the classes. You will change this with your obj.names.
+
+
