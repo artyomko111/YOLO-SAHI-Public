@@ -127,3 +127,15 @@ pip install -e .
 # Train the yolov10-x model for 500 epochs
 yolo detect train data= data/data_visdrone.yaml model= models/detect/yolov10-x.yaml epochs=500 batch=2 imgsz=1280 device=0 pretrained=yolov10x.pt save_json=True
 ```
+### YOLOv11
+Follow these instructions to train the YOLOV11-X:
+1. Create the conda environment
+```
+conda create -n yolov11 python=3.11
+conda activate yolov11
+
+# Move to the YOLOV10 directory
+cd train/YOLOv11
+```
+
+
