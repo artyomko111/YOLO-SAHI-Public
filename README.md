@@ -137,7 +137,7 @@ conda activate yolov11
 # Move to the YOLOV11 directory
 cd train/YOLOv11
 ```
-2. Download the [YOLOv11-X model](https://github.com/artyomko111/YOLO-SAHI/blob/main/models/yolov11x.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
+2. Download the [YOLOv11-X model](https://github.com/artyomko111/YOLO-SAHI/blob/main/models/yolov11x_modified.yaml) and make sure that ```nc: 10```, since our project also uses 10 classes.
 3. Install the dependencies
 ```
 pip install ultralytics
