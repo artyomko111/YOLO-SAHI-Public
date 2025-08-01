@@ -39,5 +39,5 @@ dataset/
 │ │ ├── images/
 │ │ └── labels/
 ```
-4. Convert the VisDrone dataset's labels to COCO format (.json) using the following command.
+4. Use [Yolo-to-COCO-format-converter](https://github.com/Taeyoung96/Yolo-to-COCO-format-converter) to convert the VisDrone dataset's labels to COCO format (.json).
 
