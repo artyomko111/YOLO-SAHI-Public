@@ -145,7 +145,7 @@ pip install ultralytics
 4. Train the YOLOv11-X model on the VisDrone dataset using the following command
 ```
 # Train the yolov11-x model for 500 epochs
-yolo detect train data=data/data_visdrone.yaml model=models/detect/yolov11x.yaml epochs=500 batch=2 imgsz=1280 device=0 save_json=True
+yolo detect train data=data/data_visdrone.yaml model=models/detect/yolov11x-modified.yaml epochs=500 batch=2 imgsz=1280 device=0 save_json=True
 ```
 
 
