@@ -177,4 +177,10 @@ conda activate sahi
 # Move to the YOLO-R directory
 cd predict/sahi
 ```
+2. Install the dependencies
+```
+pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu126
+pip install ultralytics>=8.3.161
+pip install sahi
+```
 
