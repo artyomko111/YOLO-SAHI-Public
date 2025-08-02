@@ -6,10 +6,6 @@ Install the following dependencies:
 ```
 Anaconda          # Create inference and training environments on Ubuntu
 ```
-Install additional dependencies:
-```
-pip install -r requirements.txt
-```
 Install your desired version of pytorch and torchvision:
 ```
 pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu126
