@@ -1,0 +1,5 @@
+train: /Users/artemubugunov/Downloads/VisDrone2YOLO-main/VisDrone2019-DET-train/images
+val:  /Users/artemubugunov/Downloads/VisDrone2YOLO-main/VisDrone2019-DET-val/images
+test: /Users/artemubugunov/Downloads/VisDrone2YOLO-main/VisDrone2019-DET-test-dev/images
+nc: 10
+names: ['pedestrian', 'people', 'bicycle', 'car', 'van', 'truck', 'tricycle', 'awning-tricycle', 'bus', 'motor']
