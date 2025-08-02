@@ -184,9 +184,9 @@ sahi predict --slice_width 1024 --slice_height 1024 --overlap_height_ratio 0.2 -
 Run the following command to perform COCO evaluation.<br>
 ```sahi coco evaluate --dataset_json_path VisDrone2019-DET_test_coco_start.json --result_json_path result.json```<br>
 Provide the COCO-format JSON labels file, which was converted as described in the 'Data Preparation' section ```--dataset_json_path VisDrone2019-DET_test_coco_start.json```, and the prediction JSON file generated in the previous step ```--result_json_path result.json```.<br>
-If you want to specify max detections, set it as ```--proposal_nums "[10 100 500]"```.
-Use this code to get Precision and Recall metrics.
-```python Precision, Recall.py``` 
+If you want to specify max detections, set it as ```--proposal_nums "[10 100 500]"```.<br>
+Use this code to get Precision and Recall metrics.<br>
+```python Precision, Recall.py``` <br>
 Inside the code, under the comment ```# Load your COCO annotations JSON files```, specify the path to the file ```VisDrone2019-DET_test_coco_start.json```.
 Under the comment ```# Load the prediction results from results.json```, specify the path to the ```results.json``` file generated after SAHI prediction.
 
