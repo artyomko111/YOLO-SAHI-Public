@@ -188,5 +188,11 @@ Under the comment ```# Load the prediction results from results.json```, specify
 Use this script to compute mAP@50, mAP@75, and mAP@90 for each class from COCO-format JSON predictions.<br>
 ```python val_sahi.py```<br>
 Inside this code, just like in the previous one, under the comment ```# ===Download dataset===```, specify the path to the ```VisDrone2019-DET_test_coco_start.json``` file, and also specify the path to the ```results.json``` file generated after the SAHI prediction.In the line ```def compute_ap_class(class_id, iou_thres=0.5)```, change the value to 0.75 or 0.9 to compute the corresponding mAP metrics.
+## Experimental Results
+### Training Results
+#### YOLOv9-E training results
+| Labels |   TP  |  FP  |   FN  |   P   |   R   | mAP@.5 | mAP@.5:.95 |
+|:------:|:-----:|:----:|:-----:|:-----:|:-----:|:------:|:----------:|
+|  38759 | 22552 | 4757 | 11831 | 0.843 | 0.405 |  0.618 |    0.468   |
 
 
