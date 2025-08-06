@@ -227,5 +227,10 @@ Table 6. YOLOv10-C2f_SHSA training results
 <br>
 Table 7. YOLOv12-C3k2_SHSA training results
 
+| Labels |   TP  |  FP  |   FN  |   P   |   R   | mAP@.5 | mAP@.5:.95 |
+|:------:|:-----:|:----:|:-----:|:-----:|:-----:|:------:|:----------:|
+|  38759 | 20713 | 2446 | 54360 | 0.836 | 0.182 |  0.507 |    0.39    |
 
+• To obtain the metric results for Labels, TP (True Positives), FP (False Positives), and FN (False Negatives) from Tables 1–7, we use the TPFPFN.py script located in the dataprocessing folder.
+• 
 
