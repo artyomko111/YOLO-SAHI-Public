@@ -234,3 +234,5 @@ Table 7. YOLOv12-C3k2_SHSA training results
 • To obtain the metric results for Labels, TP (True Positives), FP (False Positives), and FN (False Negatives) from Tables 1–7, we use the ```TPFPFN.py``` script located in the dataprocessing folder.<br>
 • According to the picture below, we first need to specify the path to the YOLO .txt annotation files from our dataset in the line ```annotation_dir```, and the path to the annotations obtained after testing our model, also in YOLO .txt format, in the line ```result_dir``` <br>
 ![TPFPFN](.github/assets/tpfpfn-1.png)
+• This is the final result we obtain. Now, we need to sum the values of ```TP```, ```FP```, and ```FN``` across all classes and record them in a table.
+![TPFPFN](.github/assets/tpfpfn_result.png)
