@@ -237,7 +237,7 @@ Table 7. YOLOv12-C3k2_SHSA training results
 • This is the final result we obtain. Now, we need to sum the values of ```TP```, ```FP```, and ```FN``` across all classes and record them in a table.
 ![TPFPFN](.github/assets/tpfpfn_result.png)
 • As for the values of Precision, Recall, mAP@50, and mAP@50-95, they can be obtained from the table after training the model or by using the following command:<br>
-```!yolo val model=/YOLOv12_SHSA/weights/best.pt data=/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5```<br>
+```yolo val model=/YOLOv12_SHSA/weights/best.pt data=/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5```<br>
 In the ```data_visdrone.yaml``` file, you need to specify the path to the folder ```VisDrone2YOLO-main/VisDrone2019-DET-val/images``` in the ```val:``` field<br>
 Table 8. Comprehensive Comparison Table of All Test Results
 
@@ -255,3 +255,6 @@ Table 8. Comprehensive Comparison Table of All Test Results
 | YOLOv10+C2f_SHSA   |  0.72 |  0.4  |  0.552 |  0.418  |  0.133  |   0.377   | 26.32 |
 | YOLOv12+C3k_SHSA   | 0.814 | 0.163 |  0.487 |    -    |    -    |   0.352   |  7.35 |
 
+• In Table 8, the metrics Precision, Recall, mAP@50, and mAP@50-95 were obtained using the following command:<br>
+```yolo val model=/YOLOv12_SHSA/weights/best.pt data=/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5``` 
+In the ```data_visdrone.yaml``` file, you need to specify the path to the folder ```VisDrone2YOLO-main/VisDrone2019-DET-test-dev/images``` in the ```val:``` field<br>
