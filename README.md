@@ -291,3 +291,27 @@ Table 9. Comprehensive Comparison Table of All Test Results-2
 <br>
 • To obtain the metric results for Labels, TP (True Positives), FP (False Positives), and FN (False Negatives) from Tables 9, we use the ```TPFPFN.py``` script located in the dataprocessing folder.<br>
 • To obtain mAP@50, mAP@75, mAP@90, and mAP@95, the ```cocoapi.py``` script was used. The cocoGt variable was assigned the path to the COCO annotations, while the cocoDt variable was assigned the path to ```result.json``` generated after prediction. <br>
+Table 10. Comparison Results of Various Methods on the Testset-Dev in the VisDrone-DET Dataset.
+
+|       Methods      | Images |  AP50  |  AP(S) |  AP(M) |  AP(L) |
+|:------------------:|:------:|:------:|:------:|:------:|:------:|
+|     HIC-YOLOv5     |  1610  | 36.95% |    -   |    -   |    -   |
+|   PVswin-YOLOv8s   |  1610  | 35.20% |    -   |    -   |    -   |
+|        SimD        |  1610  | 32.80% |    -   |    -   |    -   |
+|        DIPKD       |  1610  | 31.92% |  9.56% | 25.90% | 38.98% |
+|       AdaZoom      |  1610  | 56.16% |    -   |    -   |    -   |
+|       MDAMDL       |  1610  | 52.00% |    -   |    -   |    -   |
+|  YOLOv9+SAHI(Ours) |  1610  | 72.90% | 15.60% | 36.60% | 49.30% |
+|       YOLOv9       |  1610  | 56.00% | 11.00% | 33.30% | 47.40% |
+| YOLOv10+SAHI(Ours) |  1610  | 72.30% | 14.20% | 34.70% | 40.20% |
+|       YOLOv10      |  1610  | 53.30% | 11.90% | 32.70% | 38.60% |
+| YOLOv11+SAHI(Ours) |  1610  | 73.90% | 14.50% | 35.10% | 44.50% |
+|       YOLOv11      |  1610  | 55.70% | 13.50% | 34.10% | 46.90% |
+| YOLOv12+SAHI(Ours) |  1610  | 64.30% | 14.00% | 32.00% | 28.50% |
+|       YOLOv12      |  1610  | 55.00% | 11.80% | 32.90% | 40.70% |
+
+•   The performance metrics presented in Table 11 for the proposed models (YOLOv9+SAHI, YOLOv10+SAHI, YOLOv11+SAHI, and YOLOv12+SAHI) were obtained using the SAHI prediction module. After running the prediction process with SAHI, the evaluation of results was conducted using the COCO API via the following command:<br>
+```sahi coco evaluate --dataset_json_path VisDrone2019-DET_test_coco_start.json --result_json_path result.json --proposal_nums 100```<br>
+where VisDrone2019-DET_test_coco_start.json is the ground truth file converted from YOLO .txt labels to COCO .json format, and result.json contains predictions from the SAHI inference process.<br>
+For other methods shown in Table 11, the results were collected directly from the official papers or repositories, as cited.
+
