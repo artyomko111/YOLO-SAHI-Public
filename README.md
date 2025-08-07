@@ -262,7 +262,7 @@ In the ```data_visdrone.yaml``` file, you need to specify the path to the folder
 • In Table 8, the metrics mAP@.75 and mAP@.90 for YOLOv9-E, YOLOv10-X, YOLOv11-X, YOLOv12-X, YOLOv9+C3k2_SHSA, YOLOv10+C2f_SHSA, YOLOv12+C3k_SHSA were obtained using the following command:<br>
 ```python cocoapi.py```<br>
 Inside the code, under the comment ```# Load your COCO annotations JSON files```, specify the path to the file ```annotations_yolo.json```.
-Under the comment ```# Load the prediction results from results.json```, specify the path to the ```results.json``` file generated after after testing our model(```save_json=True```).<br>
+Under the comment ```# Load the prediction results from results.json```, specify the path to the ```results.json``` file generated after after testing our model(```save_json=True```). Also add the following line before ```cocoEval.evaluate()```: ```cocoEval.params.iouThrs = [0.5, 0.75, 0.9]```<br>
 • In Table 8, the metrics Precision, Recall for YOLOv9+SAHI, YOLOv10+SAHI, YOLOv11+SAHI, YOLOv12+SAHI were obtained using the following command:<br>
 ```python Precision, Recall.py``` <br>
 Inside the code, under the comment ```# Load your COCO annotations JSON files```, specify the path to the file ```VisDrone2019-DET_test_coco_start.json```.
@@ -290,7 +290,7 @@ Table 9. Comprehensive Comparison Table of All Test Results-2
 | YOLOv12+C3k2_SHSA  | 20713 | 2446 | 54360 |  0.366 |  0.223  |  0.212  |  0.216  |
 <br>
 • To obtain the metric results for Labels, TP (True Positives), FP (False Positives), and FN (False Negatives) from Tables 9, we use the ```TPFPFN.py``` script located in the dataprocessing folder.<br>
-• To obtain mAP@50, mAP@75, mAP@90, and mAP@95, the ```cocoapi.py``` script was used. The cocoGt variable was assigned the path to the COCO annotations, while the cocoDt variable was assigned the path to ```result.json``` generated after prediction. <br>
+• To obtain mAP@50, mAP@75, mAP@90, and mAP@95, the ```cocoapi.py``` script was used. The cocoGt variable was assigned the path to the COCO annotations, while the cocoDt variable was assigned the path to ```result.json``` generated after prediction. To obtain ```mAP@90```, add the following line before ```cocoEval.evaluate()```: ```cocoEval.params.iouThrs = [0.5, 0.75, 0.9]```. <br>
 Table 10. Comparison Results of Various Methods on the Testset-Dev in the VisDrone-DET Dataset.
 
 |       Methods      | Images |  AP50  |  AP(S) |  AP(M) |  AP(L) |
