@@ -238,4 +238,19 @@ Table 7. YOLOv12-C3k2_SHSA training results
 ![TPFPFN](.github/assets/tpfpfn_result.png)
 • As for the values of Precision, Recall, mAP@50, and mAP@50-95, they can be obtained from the table after training the model or by using the following command:<br>
 ```!yolo val model=/YOLOv12_SHSA/weights/best.pt data=/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5```<br>
-In the ```data_visdrone.yaml``` file, you need to specify the path to the folder ```VisDrone2YOLO-main/VisDrone2019-DET-val/images``` in the ```val:``` field
+In the ```data_visdrone.yaml``` file, you need to specify the path to the folder ```VisDrone2YOLO-main/VisDrone2019-DET-val/images``` in the ```val:``` field<br>
+Table 8. Comprehensive Comparison Table of All Test Results
+
+| Total Labels=75102 |   P   |   R   | mAP@.5 | mAP@.75 | mAP@.90 | mAP@.5:95 |  FPS  |
+|:------------------:|:-----:|:-----:|:------:|:-------:|:-------:|:---------:|:-----:|
+| YOLOv9-E           | 0.791 | 0.345 |  0.56  |  0.429  |  0.146  |   0.402   | 30.96 |
+| YOLOv9+SAHI        | 0.785 | 0.592 |  0.729 |  0.564  |  0.217  |   0.516   |  1.14 |
+| YOLOv10-X          | 0.723 | 0.378 |  0.543 |  0.411  |  0.136  |   0.371   | 57.14 |
+| YOLOv10+SAHI       | 0.783 | 0.563 |  0.723 |  0.537  |  0.183  |   0.491   |  2.21 |
+| YOLOv11-X          | 0.727 | 0.405 |  0.557 |   0.42  |  0.143  |   0.387   |  7.00 |
+| YOLOv11+SAHI       | 0.792 | 0.565 |  0.739 |  0.597  |  0.224  |   0.524   |  0.69 |
+| YOLOv12-X          | 0.764 | 0.356 |  0.55  |  0.440  |  0.157  |    0.3    |  18.5 |
+| YOLOv12+SAHI       | 0.830 | 0.530 |  0.643 |  0.498  |  0.174  |   0.451   |  0.27 |
+| YOLOv9+C3k2_SHSA   | 0.755 |  0.37 |  0.555 |    -    |    -    |   0.388   | 25.18 |
+| YOLOv10+C2f_SHSA   |  0.72 |  0.4  |  0.552 |  0.418  |  0.133  |   0.377   | 26.32 |
+| YOLOv12+C3k_SHSA   | 0.814 | 0.163 |  0.487 |    -    |    -    |   0.352   |  7.35 |
