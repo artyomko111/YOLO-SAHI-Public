@@ -255,6 +255,12 @@ Table 8. Comprehensive Comparison Table of All Test Results
 | YOLOv10+C2f_SHSA   |  0.72 |  0.4  |  0.552 |  0.418  |  0.133  |   0.377   | 26.32 |
 | YOLOv12+C3k_SHSA   | 0.814 | 0.163 |  0.487 |    -    |    -    |   0.352   |  7.35 |
 
-• In Table 8, the metrics Precision, Recall, mAP@50 for YOLOv9-E, YOLOv10-X, YOLOv11-X, YOLOv12-X, YOLOv9+C3k2_SHSA, YOLOv10+C2f_SHSA, YOLOv12+C3k_SHSA, and mAP@50-95 were obtained using the following command:<br>
+• In Table 8, the metrics Precision, Recall, mAP@50, and mAP@50-95 for YOLOv9-E, YOLOv10-X, YOLOv11-X, YOLOv12-X, YOLOv9+C3k2_SHSA, YOLOv10+C2f_SHSA, and YOLOv12+C3k_SHSA were obtained using the following command:<br>
 ```yolo val model=/YOLOv12_SHSA/weights/best.pt data=/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5``` 
 In the ```data_visdrone.yaml``` file, you need to specify the path to the folder ```VisDrone2YOLO-main/VisDrone2019-DET-test-dev/images``` in the ```val:``` field<br>
+• In Table 8, the metrics mAP@.75 and mAP@.90 for YOLOv9-E, YOLOv10-X, YOLOv11-X, YOLOv12-X, YOLOv9+C3k2_SHSA, YOLOv10+C2f_SHSA, YOLOv12+C3k_SHSA were obtained using the following command:<br>
+```python cocoapi.py```<br>
+Inside the code, under the comment ```# Load your COCO annotations JSON files```, specify the path to the file ```annotations_yolo.json```.
+Under the comment ```# Load the prediction results from results.json```, specify the path to the ```results.json``` file generated after after testing our model(```save_json=True```).<br>
+As a result, we obtain the following output, as shown in the figure below. The required metrics are then copied into the table.
+![COCO](.github/assets/testing_example_for_github.png)
