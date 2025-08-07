@@ -272,3 +272,4 @@ Under the comment ```# Load the prediction results from results.json```, specify
 Inside this code, just like in the previous one, under the comment ```# ===Download dataset===```, specify the path to the ```VisDrone2019-DET_test_coco_start.json``` file, and also specify the path to the ```results.json``` file generated after the SAHI prediction.In the line ```def compute_ap_class(class_id, iou_thres=0.5)```, change the value to 0.75 or 0.9 to compute the corresponding mAP metrics.
 As a result, we obtain the following output, as shown in the figure below. The required metrics are then copied into the table.
 ![VAL_SAHI_EXAMPLE](.github/assets/val_sahi_example.png)
+• FPS metric was calculated using the formula: 1000 / total processing time.
