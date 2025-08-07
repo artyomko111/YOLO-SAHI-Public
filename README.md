@@ -263,5 +263,12 @@ In the ```data_visdrone.yaml``` file, you need to specify the path to the folder
 ```python cocoapi.py```<br>
 Inside the code, under the comment ```# Load your COCO annotations JSON files```, specify the path to the file ```annotations_yolo.json```.
 Under the comment ```# Load the prediction results from results.json```, specify the path to the ```results.json``` file generated after after testing our model(```save_json=True```).<br>
+• In Table 8, the metrics Precision, Recall for YOLOv9+SAHI, YOLOv10+SAHI, YOLOv11+SAHI, YOLOv12+SAHI were obtained using the following command:<br>
+```python Precision, Recall.py``` <br>
+Inside the code, under the comment ```# Load your COCO annotations JSON files```, specify the path to the file ```VisDrone2019-DET_test_coco_start.json```.
+Under the comment ```# Load the prediction results from results.json```, specify the path to the ```results.json``` file generated after SAHI prediction.<br>
+• In Table 8, the metrics mAP@.50, mAP@.75, mAP@.90, and mAP@50-95 for YOLOv9+SAHI, YOLOv10+SAHI, YOLOv11+SAHI, YOLOv12+SAHI were obtained using the following command:<br>
+```python val_sahi.py```<br>
+Inside this code, just like in the previous one, under the comment ```# ===Download dataset===```, specify the path to the ```VisDrone2019-DET_test_coco_start.json``` file, and also specify the path to the ```results.json``` file generated after the SAHI prediction.In the line ```def compute_ap_class(class_id, iou_thres=0.5)```, change the value to 0.75 or 0.9 to compute the corresponding mAP metrics.
 As a result, we obtain the following output, as shown in the figure below. The required metrics are then copied into the table.
-![COCO](.github/assets/testing_example_for_github.png)
+![VAL_SAHI_EXAMPLE](.github/assets/val_sahi_example.png)
