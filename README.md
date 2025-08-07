@@ -273,3 +273,18 @@ Inside this code, just like in the previous one, under the comment ```# ===Downl
 As a result, we obtain the following output, as shown in the figure below. The required metrics are then copied into the table.
 ![VAL_SAHI_EXAMPLE](.github/assets/val_sahi_example.png)<br>
 • ```FPS``` metric was calculated using the formula: 1000 / total processing time.
+Table 9. Comprehensive Comparison Table of All Test Results-2
+
+| Total Labels=75102 |   TP  |  FP  |   FN  | mAP@50 | mAP@.75 | mAP@.90 | mAP@.95 |
+|:------------------:|:-----:|:----:|:-----:|:------:|:-------:|:-------:|:-------:|
+| YOLOv9-E           | 35003 | 5199 | 31321 |  0.306 |  0.255  |  0.205  |  0.213  |
+| YOLOv9+SAHI        | 54143 | 1200 |  5506 |  0.394 |  0.273  |  0.247  |  0.254  |
+| YOLOv10-X          | 37069 | 7592 | 34161 |  0.325 |  0.235  |  0.207  |  0.214  |
+| YOLOv10+SAHI       | 51077 | 1088 |  5983 |  0.375 |  0.254  |  0.237  |  0.230  |
+| YOLOv11-X          | 36958 | 7161 | 38002 |  0.349 |  0.256  |  0.225  |  0.232  |
+| YOLOv11+SAHI       | 51574 | 1075 |  6277 |  0.373 |  0.260  |  0.233  |  0.240  |
+| YOLOv12-X          | 35726 | 5723 | 30567 |  0.311 |  0.241  |  0.207  |  0.214  |
+| YOLOv12-SAHI       | 39822 | 8144 | 35280 |  0.333 |  0.244  |  0.216  |  0.222  |
+| YOLOv9+C3k2_SHSA   | 21733 | 4936 | 16811 |  0.323 |  0.242  |  0.210  |  0.218  |
+| YOLOv10+C2f_SHSA   | 32740 | 5157 | 42295 |  0.343 |  0.246  |  0.217  |  0.224  |
+| YOLOv12+C3k2_SHSA  | 20713 | 2446 | 54360 |  0.366 |  0.223  |  0.212  |  0.216  |
