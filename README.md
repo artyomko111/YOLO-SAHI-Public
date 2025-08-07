@@ -272,7 +272,7 @@ Under the comment ```# Load the prediction results from results.json```, specify
 Inside this code, just like in the previous one, under the comment ```# ===Download dataset===```, specify the path to the ```VisDrone2019-DET_test_coco_start.json``` file, and also specify the path to the ```results.json``` file generated after the SAHI prediction.In the line ```def compute_ap_class(class_id, iou_thres=0.5)```, change the value to 0.75 or 0.9 to compute the corresponding mAP metrics.
 As a result, we obtain the following output, as shown in the figure below. The required metrics are then copied into the table.
 ![VAL_SAHI_EXAMPLE](.github/assets/val_sahi_example.png)<br>
-• ```FPS``` metric was calculated using the formula: 1000 / total processing time.
+• ```FPS``` metric was calculated using the formula: 1000 / total processing time.<br>
 Table 9. Comprehensive Comparison Table of All Test Results-2
 
 | Total Labels=75102 |   TP  |  FP  |   FN  | mAP@50 | mAP@.75 | mAP@.90 | mAP@.95 |
@@ -288,3 +288,5 @@ Table 9. Comprehensive Comparison Table of All Test Results-2
 | YOLOv9+C3k2_SHSA   | 21733 | 4936 | 16811 |  0.323 |  0.242  |  0.210  |  0.218  |
 | YOLOv10+C2f_SHSA   | 32740 | 5157 | 42295 |  0.343 |  0.246  |  0.217  |  0.224  |
 | YOLOv12+C3k2_SHSA  | 20713 | 2446 | 54360 |  0.366 |  0.223  |  0.212  |  0.216  |
+• To obtain the metric results for Labels, TP (True Positives), FP (False Positives), and FN (False Negatives) from Tables 9, we use the ```TPFPFN.py``` script located in the dataprocessing folder.<br>
+• To obtain mAP@50, mAP@75, mAP@90, and mAP@95, the ```cocoapi.py``` script was used. The cocoGt variable was assigned the path to the COCO annotations, while the cocoDt variable was assigned the path to ```result.json``` generated after prediction. <br>
