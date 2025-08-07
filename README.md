@@ -232,7 +232,10 @@ Table 7. YOLOv12-C3k2_SHSA training results
 |  38759 | 20713 | 2446 | 54360 | 0.836 | 0.182 |  0.507 |    0.39    |
 
 • To obtain the metric results for Labels, TP (True Positives), FP (False Positives), and FN (False Negatives) from Tables 1–7, we use the ```TPFPFN.py``` script located in the dataprocessing folder.<br>
-• According to the picture below, we first need to specify the path to the YOLO .txt annotation files from our dataset in the line ```annotation_dir```, and the path to the annotations obtained after testing our model, also in YOLO .txt format, in the line ```result_dir``` <br>
+• According to the picture below, we first need to specify the path to the YOLO .txt annotation files from our dataset in the line ```annotation_dir```, and the path to the annotations obtained after testing our model(```save_txt=True```), also in YOLO .txt format, in the line ```result_dir``` <br>
 ![TPFPFN](.github/assets/tpfpfn-1.png)
 • This is the final result we obtain. Now, we need to sum the values of ```TP```, ```FP```, and ```FN``` across all classes and record them in a table.
 ![TPFPFN](.github/assets/tpfpfn_result.png)
+• As for the values of Precision, Recall, mAP@50, and mAP@50-95, they can be obtained from the table after training the model or by using the following command:<br>
+```!yolo val model=/content/drive/MyDrive/YOLOv12_SHSA/weights/best.pt data=/content/drive/MyDrive/yolov10/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5```<br>
+In the ```data_visdrone.yaml``` file, you need to specify the path to the folder ```VisDrone2YOLO-main/VisDrone2019-DET-val/images``` in the ```val:``` field
