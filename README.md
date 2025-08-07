@@ -254,3 +254,4 @@ Table 8. Comprehensive Comparison Table of All Test Results
 | YOLOv9+C3k2_SHSA   | 0.755 |  0.37 |  0.555 |    -    |    -    |   0.388   | 25.18 |
 | YOLOv10+C2f_SHSA   |  0.72 |  0.4  |  0.552 |  0.418  |  0.133  |   0.377   | 26.32 |
 | YOLOv12+C3k_SHSA   | 0.814 | 0.163 |  0.487 |    -    |    -    |   0.352   |  7.35 |
+
