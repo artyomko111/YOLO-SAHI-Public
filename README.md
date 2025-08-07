@@ -237,5 +237,5 @@ Table 7. YOLOv12-C3k2_SHSA training results
 • This is the final result we obtain. Now, we need to sum the values of ```TP```, ```FP```, and ```FN``` across all classes and record them in a table.
 ![TPFPFN](.github/assets/tpfpfn_result.png)
 • As for the values of Precision, Recall, mAP@50, and mAP@50-95, they can be obtained from the table after training the model or by using the following command:<br>
-```!yolo val model=/content/drive/MyDrive/YOLOv12_SHSA/weights/best.pt data=/content/drive/MyDrive/yolov10/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5```<br>
+```!yolo val model=/YOLOv12_SHSA/weights/best.pt data=/VisDrone/data_visdrone.yaml batch=2 iou=0.65 conf=0.5```<br>
 In the ```data_visdrone.yaml``` file, you need to specify the path to the folder ```VisDrone2YOLO-main/VisDrone2019-DET-val/images``` in the ```val:``` field
